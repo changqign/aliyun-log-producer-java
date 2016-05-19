@@ -12,7 +12,7 @@ import com.aliyun.openservices.log.common.LogItem;
 import com.aliyun.openservices.log.exception.LogException;
 
 public class ProducerTest {
-	private final static int ThreadsCount = 20;
+	private final static int ThreadsCount = 25;
 	public static String RandomString(int length) {
 		String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		Random random = new Random();
