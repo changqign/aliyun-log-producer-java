@@ -26,7 +26,7 @@ public class ProducerTest {
 
 	public static void LowLevelPutLogsTest() {
 		Client client = new Client("cn-shanghai-corp.sls.aliyuncs.com",
-				"K59AYAGHpf8w9X0J", "7hvlClY49eO4v5Nm2EOkUOoIOlK3MW");
+				"", "");
 		Random random = new Random();
 		final Vector<Vector<LogItem>> logGroups = new Vector<Vector<LogItem>>();
 		for (int i = 0; i < 100; ++i) {
@@ -54,7 +54,7 @@ public class ProducerTest {
 
 	public static void PutEveryLogsTest() throws InterruptedException {
 		final Client client = new Client("cn-shanghai-corp.sls.aliyuncs.com",
-				"K59AYAGHpf8w9X0J", "7hvlClY49eO4v5Nm2EOkUOoIOlK3MW");
+				"", "");
 		final Vector<Vector<LogItem>> logGroups = new Vector<Vector<LogItem>>();
 		for (int i = 0; i < 1000000; ++i) {
 			Vector<LogItem> tmpLogGroup = new Vector<LogItem>();
@@ -92,8 +92,8 @@ public class ProducerTest {
 		ProducerConfig producerConfig = new ProducerConfig();
 		final LogProducer producer = new LogProducer(producerConfig);
 		producer.updateProjectConfig(new ProjectConfig("ali-log-service",
-				"cn-shanghai-corp.sls.aliyuncs.com", "K59AYAGHpf8w9X0J",
-				"7hvlClY49eO4v5Nm2EOkUOoIOlK3MW"));
+				"cn-shanghai-corp.sls.aliyuncs.com", "",
+				""));
 		final Vector<Vector<LogItem>> logGroups = new Vector<Vector<LogItem>>();
 		for (int i = 0; i < 100000; ++i) {
 			Vector<LogItem> tmpLogGroup = new Vector<LogItem>();
